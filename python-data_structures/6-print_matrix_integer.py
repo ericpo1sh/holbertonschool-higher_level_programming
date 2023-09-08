@@ -1,4 +1,4 @@
-#!/usrs/bin/python3
+#!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
     if matrix == [[]]:
@@ -9,4 +9,4 @@ def print_matrix_integer(matrix=[[]]):
                 if numb == len(matrix[row]) - 1:
                     print("{}".format(matrix[row][numb]))
                 else:
-                    print("{}".format(matrix[row][numb]), end="")
+                    print("{}".format(matrix[row][numb]), end=" ")
