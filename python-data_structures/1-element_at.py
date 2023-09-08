@@ -8,4 +8,4 @@ def element_at(my_list, idx):
     if idx > len(my_list):
         return None
 
-    return idx, my_list[idx]
+    return my_list[idx]
