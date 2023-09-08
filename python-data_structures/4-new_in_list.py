@@ -8,6 +8,6 @@ def new_in_list(my_list, idx, element):
         return my_list
 
     if my_list:
-        my_list.copy() = templist
+        templist = my_list.copy()
         templist[idx] = element
         return templist
