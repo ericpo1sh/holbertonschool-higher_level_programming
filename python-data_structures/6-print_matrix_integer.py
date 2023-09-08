@@ -7,6 +7,6 @@ def print_matrix_integer(matrix=[[]]):
         for row in range(0, len(matrix)):
             for numb in range(0, len(matrix[row])):
                 if numb == len(matrix[row]) - 1:
-                    print("{}".format(matrix[row][numb]))
+                    print("{:d}".format(matrix[row][numb]))
                 else:
-                    print("{}".format(matrix[row][numb]), end=" ")
+                    print("{:d}".format(matrix[row][numb]), end=" ")
