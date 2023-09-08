@@ -5,7 +5,7 @@ def print_matrix_integer(matrix=[[]]):
         print()
     else:
         for row in range(0, len(matrix)):
-            for numb in range(0, len(matrix[row]))
+            for numb in range(0, len(matrix[row])):
                 if numb == len(row) - 1:
                     print("{}".format(matrix[row][numb]))
                 else:
