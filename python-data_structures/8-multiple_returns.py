@@ -1,6 +1,5 @@
 def multiple_returns(sentence):
     if sentence:
-        newtuple = (len(sentence) - 1, sentence[0])
+        return len(sentence), sentence[0]
     else:
-        newtuple = (0, None)
-    return newtuple
+        return 0, None
