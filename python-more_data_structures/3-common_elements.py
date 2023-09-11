@@ -6,4 +6,3 @@ def common_elements(set_1, set_2):
             if item == items:
                 set_3 = item
     return set_3
-
