@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Creating a functon that add two integers """
+
+
 def add_integer(a, b=98):
     """ A: first integer, B: second integer """
     if type(a) not in [int, float]:
