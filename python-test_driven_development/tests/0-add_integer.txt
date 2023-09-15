@@ -70,5 +70,44 @@ Add infinity:
     ...
     OverflowError: cannot convert float infinity to integer
 
+Adding nan:
 
+    >>> add_integer(0, float('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
 
+Testing a string with int:
+
+    >>> add_integer("hello", 0)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Testing a int with string:
+
+    >>> add_integer(0, "hello")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Testing for both strings:
+
+    >>> add_integer("hello", "world")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Testing float overflow:
+
+    >>> add_integer(float('inf'), 0)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+Testing for two invalid args:
+
+    >>> add_integer(None, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
