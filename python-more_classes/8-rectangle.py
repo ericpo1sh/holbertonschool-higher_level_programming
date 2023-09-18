@@ -54,7 +54,7 @@ class Rectangle:
         else:
             return (2 * self.__width) + (2 * self.__height)
 
-    @staticmethod    
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """ Checks area difference and returns higher rect """
         if not isinstance(rect_1, Rectangle):
@@ -65,7 +65,7 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-        
+
     def __str__(self):
         """ Making the print function """
         if self.__width == 0 or self.__height == 0:
