@@ -65,9 +65,10 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-        
+
     @classmethod
     def square(cls, size=0):
+        """ cls references initialization of new rectangle """
         return cls(size, size)
 
     def __str__(self):
