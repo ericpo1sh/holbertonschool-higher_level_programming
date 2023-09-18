@@ -1,1 +1,35 @@
-i
+The "5-text_indentation" Module
+===============================
+
+Using "text_indentation"
+------------------------
+
+import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Regular testing:
+    >>> text_indentation("""Hello world?""")
+    Hello world?
+    <BLANKLINE>
+
+Text as string int:
+    >>> text_indentation(5)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Text as a blank line:
+    >>> text_indentation(" ")
+    
+
+Text missing arguement:
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Text as string:
+    >>> text_indentation(string)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'string' is not defined
