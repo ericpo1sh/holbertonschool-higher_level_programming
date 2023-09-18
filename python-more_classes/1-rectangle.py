@@ -5,11 +5,13 @@
 class Rectangle:
     """ Rectangle class initiated """
     def __init__(self, width=0, height=0):
+        """ Setting attributes of Rectangle """
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """ Setting property for width """
         return self.__width
 
     @width.setter
@@ -24,6 +26,7 @@ class Rectangle:
 
     @property
     def height(self):
+        """ Setting property for height """
         return self.__height
 
     @height.setter
