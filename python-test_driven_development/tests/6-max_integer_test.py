@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+""" Unittest for max_integer([]) """
+
 import unittest
 from max_integer import max_integer
 
@@ -23,3 +26,6 @@ class test_max_integer(unittest.TestCase):
     """ Test for “list is empty” exists """
     def test_empty_list(self)
         self.assertEqual(max_integer([]), None)
+
+if __name__ == '__main__':
+    unittest.main()
