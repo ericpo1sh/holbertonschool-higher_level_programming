@@ -30,6 +30,6 @@ class Rectangle:
         if not isinstance(height, int):
             raise TypeError("height must be an integer")
         elif height < 0:
-            raise TypeError("heigh tmust be >= 0")
+            raise TypeError("height must be >= 0")
         else:
             self.__height = height
