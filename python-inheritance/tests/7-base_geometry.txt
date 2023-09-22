@@ -1,1 +1,41 @@
-dasdas
+The "7-base_geometry" Module
+============================
+
+Using "base_geometry" Module
+----------------------------
+
+import Module:
+    >>> bg = __import__('7-base_geometry').BaseGeometry
+
+Regular Testing:
+    >>> bg.integer_validator("Sam", 4)
+
+Name and None:
+    >>> bg.integer_validator('Sam', None)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+ Name and negative:
+    >>> bg.integer_validator("Sam", -1)
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Name and inf:
+    >>> bg.integer_validator('Mark', float('inf'))
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Name alone:
+    >>> bg.integer_validator('MarkSam')
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Name and str:
+    >>> bg.integer_validator('Mark', 'Sam')
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
