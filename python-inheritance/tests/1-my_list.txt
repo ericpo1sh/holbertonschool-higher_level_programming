@@ -1,1 +1,11 @@
-hi
+The "1-my_list" Module
+============================
+
+Using "my_list" Module
+----------------------------
+
+import Module:
+    >>> MyList = __import__('1-my_list').MyList
+
+>>> issubclass(MyList, list)
+True
