@@ -10,6 +10,7 @@ import Module:
 
     >>> bg = BaseGeometry()
     >>> type(bg)
+    <class '7-base_geometry.BaseGeometry'>
 
 Regular Testing:
     >>> bg.integer_validator("Sam", 4)
@@ -18,7 +19,7 @@ Name and None:
     >>> bg.integer_validator('Sam', None)
     Traceback (most recent call last):
     ...
-    TypeError: San must be an integer
+    TypeError: Sam must be an integer
 
  Name and negative:
     >>> bg.integer_validator("Sam", -1)
@@ -36,7 +37,7 @@ Name alone:
     >>> bg.integer_validator('MarkSam')
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() missing 1 required positional arguments: 'name' and 'value'
+    TypeError: integer_validator() missing 1 required positional arguments: 'value'
 
 Name and str:
     >>> bg.integer_validator('Mark', 'Sam')
@@ -61,3 +62,9 @@ Emmpty parameters:
     Traceback (most recent call last):
     ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Name and 0:
+    >>> bg.integer_validator("Sam", 0)
+    Traceback (most recent call last):
+    ...
+    TypeError: Sam must be greater than 0
