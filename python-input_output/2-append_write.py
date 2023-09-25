@@ -7,3 +7,6 @@ def append_write(filename="", text=""):
     if not open(filename, 'r'):
         with open(filename, 'a') as f:
             return f.write(text)
+    else:
+        with open(filename, 'a') as f:
+            return f.write(text)
