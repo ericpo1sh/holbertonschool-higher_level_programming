@@ -20,7 +20,7 @@ Name and None:
     >>> bg.integer_validator('Sam', None)
     Traceback (most recent call last):
     ...
-    TypeError: Sam must be an integer
+    TypeError: Sam must be a integer
 
  Name and negative:
     >>> bg.integer_validator("Sam", -1)
@@ -32,7 +32,7 @@ Name and inf:
     >>> bg.integer_validator('Mark', float('inf'))
     Traceback (most recent call last):
     ...
-    TypeError: Mark must be an integer
+    TypeError: Mark must be a integer
 
 Name alone:
     >>> bg.integer_validator('MarkSam')
@@ -44,13 +44,13 @@ Name and str:
     >>> bg.integer_validator('Mark', 'Sam')
     Traceback (most recent call last):
     ...
-    TypeError: Mark must be an integer
+    TypeError: Mark must be a integer
 
 Two lists:
     >>> bg.integer_validator([1, 2], [3, 4])
     Traceback (most recent call last):
     ...
-    TypeError: [1, 2] must be an integer
+    TypeError: [1, 2] must be a integer
 
 Testing area:
     >>> bg.area()
@@ -74,34 +74,34 @@ Name and Tuple:
     >>> bg.integer_validator("Sam", (1, 2))
     Traceback (most recent call last):
     ...
-    TypeError: Sam must be an integer
+    TypeError: Sam must be a integer
 
 Name and list:
     >>> bg.integer_validator("Sam", [1, 2])
     Traceback (most recent call last):
     ...
-    TypeError: Sam must be an integer
+    TypeError: Sam must be a integer
 
 Name and False:
     >>> bg.integer_validator("Sam", False)
     Traceback (most recent call last):
     ...
-    TypeError: Sam must be an integer
+    TypeError: Sam must be a integer
 
 Flipped Parameters:
     >>> bg.integer_validator(5, "Guys")
     Traceback (most recent call last):
     ...
-    TypeError: 1 must be an integer
+    TypeError: 5 must be a integer
 
 List and 0:
     >>> bg.integer_validator([1, 2], 0)
     Traceback (most recent call last):
     ...
-    TypeError: [1, 2] must be greater than 0
+    ValueError: [1, 2] must be greater than 0
 
 Name and curly brackets:
     >>> bg.integer_validator("Sam", {1, 2})
     Traceback (most recent call last):
     ...
-    TypeError: Sam must be an integer
+    TypeError: Sam must be a integer
