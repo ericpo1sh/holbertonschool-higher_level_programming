@@ -3,5 +3,6 @@
 
 
 def write_file(filename="", text=""):
+    """ Initializing the write file function """
     with open(filename, 'w', encoding='utf8') as f:
-        return f.write(text)
+        f.write(text)
