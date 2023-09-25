@@ -68,3 +68,39 @@ Name and 0:
     Traceback (most recent call last):
     ...
     ValueError: Sam must be greater than 0
+
+Name and Tuple:
+    >>> bg.integer_validator("Sam", (1, 2))
+    Traceback (most recent call last):
+    ...
+    TypeError: Sam must be an integer
+
+Name and list:
+    >>> bg.integer_validator("Sam", [1, 2])
+    Traceback (most recent call last):
+    ...
+    TypeError: Sam must be an integer
+
+Name and False:
+    >>> bg.integer_validator("Sam", False)
+    Traceback (most recent call last):
+    ...
+    TypeError: Sam must be an integer
+
+Flipped Parameters:
+    >>> bg.integer_validator(5, "Guys")
+    Traceback (most recent call last):
+    ...
+    TypeError: 1 must be an integer
+
+List and 0:
+    >>> bg.integer_validator([1, 2], 0)
+    Traceback (most recent call last):
+    ...
+    TypeError: [1, 2] must be greater than 0
+
+Name and curly brackets:
+    >>> bg.integer_validator("Sam", {1, 2})
+    Traceback (most recent call last):
+    ...
+    TypeError: Sam must be an integer
