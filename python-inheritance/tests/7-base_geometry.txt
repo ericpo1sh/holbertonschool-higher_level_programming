@@ -7,6 +7,10 @@ Using "base_geometry" Module
 import Module:
     >>> bg = __import__('7-base_geometry').BaseGeometry
 
+
+    >>> bg = BaseGeometry()
+    >>> type(bg)
+
 Regular Testing:
     >>> bg.integer_validator("Sam", 4)
 
@@ -14,28 +18,46 @@ Name and None:
     >>> bg.integer_validator('Sam', None)
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    TypeError: San must be an integer
 
  Name and negative:
     >>> bg.integer_validator("Sam", -1)
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    TypeError: Sam must be greater than 0
 
 Name and inf:
     >>> bg.integer_validator('Mark', float('inf'))
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    TypeError: Mark must be an integer
 
 Name alone:
     >>> bg.integer_validator('MarkSam')
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    TypeError: integer_validator() missing 1 required positional arguments: 'name' and 'value'
 
 Name and str:
     >>> bg.integer_validator('Mark', 'Sam')
     Traceback (most recent call last):
     ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    TypeError: Mark must be an integer
+
+Two lists:
+    >>> bg.integer_validator([1, 2], [3, 4])
+    Traceback (most recent call last):
+    ...
+    TypeError: [1, 2] must be an integer
+
+Testing area:
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is nit implemented
+
+Emmpty parameters:
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
