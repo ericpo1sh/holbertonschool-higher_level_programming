@@ -10,6 +10,6 @@ load_from_json_file = \
 
 try:
     PythonList = load_from_json_file("add_item.json")
-except FileNotFoundError:
+except:
     Pythonlist = []
 save_to_json_file(PythonList + sys.argv[1:], "add_item.json")
