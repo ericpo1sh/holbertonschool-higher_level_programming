@@ -6,7 +6,7 @@ Jload = __import__('6-load_from_json_file').load_from_json_file
 
 
 try:
-    py_list = Jload("add_item.json")
+    py_list = Jload('add_item.json')
 except FileNotFoundError:
     py_list = []
-    Jsave(py_list + argv[1:], "add_item.json")
+    Jsave(py_list + argv[1:], 'add_item.json')
