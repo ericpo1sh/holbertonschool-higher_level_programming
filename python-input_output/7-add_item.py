@@ -9,5 +9,4 @@ try:
     py_list = load("add_item.json")
 except FileNotFoundError:
     py_list = []
-finally:
     save(py_list + argv[1:], "add_item.json")
