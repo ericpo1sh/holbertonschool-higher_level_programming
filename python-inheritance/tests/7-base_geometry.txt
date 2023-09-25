@@ -7,6 +7,11 @@ Using "base_geometry" Module
 import Module:
     >>> bg = __import__('7-base_geometry').BaseGeometry
 
+
+    >>> bg = BaseGeometry()
+    >>> type(bg)
+    <class '7-base_geometry.BaseGeometry'>
+
 Regular Testing:
     >>> bg.integer_validator("Sam", 4)
 
