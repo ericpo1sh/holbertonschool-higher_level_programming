@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import sys
 """ 7-add_iem.py Module """
+import sys
 
 
 save_to_json_file = \
