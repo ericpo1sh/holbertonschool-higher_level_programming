@@ -6,4 +6,4 @@ import json
 def load_from_json_file(filename):
    """ initializing the function """
    with open(filename, 'w+') as f:
-      f.write(json.loads)
+      return f.write(json.loads)
