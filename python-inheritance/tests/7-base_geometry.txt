@@ -41,7 +41,7 @@ Name alone:
     TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 Name and str:
-    >>> bg.integer_validator('Mark', 'Sam')
+    >>> bg.integer_validator("Mark", "Sam")
     Traceback (most recent call last):
     ...
     TypeError: Mark must be a integer
@@ -115,5 +115,8 @@ List and negative number:
 List that passes:
     >>> bg.integer_validator([1, 2], 5)
 
-
-
+List and negative:
+    >>> bg.integer_validator([1, 2], -4)
+    Traceback (most recent call last):
+    ...
+    ValueError: [1, 2] must be greater than 0
