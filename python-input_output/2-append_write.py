@@ -6,6 +6,6 @@ def append_write(filename="", text=""):
     """ initializing the append_write function """
     if not open(filename, 'r'):
         return
-    
+
     with open(filename, 'a') as f:
         return f.write(text)
