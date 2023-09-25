@@ -9,4 +9,5 @@ try:
     py_list = Jload('add_item.json')
 except FileNotFoundError:
     py_list = []
-Jsave(py_list + argv[1:], 'add_item.json')
+finally:
+    Jsave(py_list + argv[1:], 'add_item.json')
