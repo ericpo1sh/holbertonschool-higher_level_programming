@@ -17,7 +17,7 @@ class Rectangle(Base):
     def width(self):
         """ Setting width return """
         return self.__width
-    
+
     @width.setter
     def width(self, width):
         """ Initializing characteristics of widh """
