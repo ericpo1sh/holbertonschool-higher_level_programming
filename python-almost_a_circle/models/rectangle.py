@@ -78,8 +78,13 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """ Displats # character for rectangle area """
+        """ Displays # character for rectangle area """
         for hite in range(self.__height):
             for wdth in range(self.__width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """ Function to display rectangle specs """
+        return ("[Rectangle] ({}) {}/{} - {}/{}"
+                .format(self.id, self.x, self.y, self.width, self.height))
