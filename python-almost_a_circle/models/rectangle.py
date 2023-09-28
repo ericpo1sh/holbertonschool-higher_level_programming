@@ -73,6 +73,20 @@ class Rectangle(Base):
         else:
             self.__y = value
 
+    def update(self, *args):
+        """ Assigns an arg to each attribute """
+        for idx, item in enumerate(args):
+            if idx == 0:
+                self.id = item
+            if idx == 1:
+                self.width = item
+            if idx == 2:
+                self.height = item
+            if idx == 3:
+                self.x = item
+            if idx == 4:
+                self.y = item
+
     def area(self):
         """ Setting return for area """
         return self.__width * self.__height
