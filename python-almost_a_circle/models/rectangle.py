@@ -100,6 +100,11 @@ class Rectangle(Base):
                 if idx == 4:
                     self.y = item
 
+    def to_dictionary(self):
+        """ Function that returns dictionary representation """
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
+
     def area(self):
         """ Setting return for area """
         return self.__width * self.__height
