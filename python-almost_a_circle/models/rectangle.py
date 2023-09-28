@@ -73,19 +73,32 @@ class Rectangle(Base):
         else:
             self.__y = value
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Assigns an arg to each attribute """
-        for idx, item in enumerate(args):
-            if idx == 0:
-                self.id = item
-            if idx == 1:
-                self.width = item
-            if idx == 2:
-                self.height = item
-            if idx == 3:
-                self.x = item
-            if idx == 4:
-                self.y = item
+        if not args:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
+        else:
+            for idx, item in enumerate(args):
+                if idx == 0:
+                    self.id = item
+                if idx == 1:
+                    self.width = item
+                if idx == 2:
+                    self.height = item
+                if idx == 3:
+                    self.x = item
+                if idx == 4:
+                    self.y = item
 
     def area(self):
         """ Setting return for area """
