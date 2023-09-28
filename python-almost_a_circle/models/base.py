@@ -5,7 +5,9 @@
 class Base:
     """ Base class initiated """
     __nb_objects = 0
+
     def __init__(self, id=None):
+        """ Attributes initialiazing """
         if id is not None:
             self.id = id
         else:
