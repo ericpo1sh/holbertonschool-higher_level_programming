@@ -29,7 +29,7 @@ class Base:
         """ Function that writes the JSON string rep of list to file """
         with open(cls.__name__ + ".json", 'w') as f:
             empty_list = []
-            if list_objs is None or len(list_objs) == 0:
+            if list_objs is None:
                 f.write(empty_list)
             else:
                 for obj in list_objs:
