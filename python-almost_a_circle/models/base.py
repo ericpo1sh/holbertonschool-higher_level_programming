@@ -40,4 +40,4 @@ class Base:
         """ Function that returns the list of JSON string reps """
         if json_string is None or json_string == []:
             return []
-        return json.dumps(json_string)
+        return json.loads(json_string)
