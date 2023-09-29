@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Base.py Module """
 import json
-import sys
+from os.path import isfile
 
 
 class Base:
@@ -51,3 +51,16 @@ class Base:
             dummy = cls(5)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        try:
+            empty_list = []
+            with open(cls.__name__ + ".json") as f:
+                json_string = Base.from_json_string(f.read())
+            for obj in json_string:
+                empty_list.append(Base.create(**obj))
+        except FileNotFoundError:
+            pass
+        finally:
+            return empty_list
