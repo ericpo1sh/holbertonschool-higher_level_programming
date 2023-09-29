@@ -36,7 +36,7 @@ class Base:
                     empty_list.append(obj.to_dictionary())
             f.write(Base.to_json_string(empty_list))
 
-    @classmethod
+    @staticmethod
     def from_json_string(json_string):
         """ Function that returns the list of JSON string reps """
         if json_string is None or json_string == []:
