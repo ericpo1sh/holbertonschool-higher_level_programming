@@ -30,8 +30,8 @@ class Base:
         with open(cls.__name__ + ".json", 'w') as f:
             empty_list = []
             if list_objs is None:
-                f.write(empty_list)
+                pass
             else:
                 for obj in list_objs:
                     empty_list.append(obj.to_dictionary())
-                    f.write(Base.to_json_string(empty_list))
+            f.write(Base.to_json_string(empty_list))
