@@ -47,7 +47,7 @@ class Base:
         """ Function that returns instances of all attributes """
         if cls.__name__ == "Rectangle":
             dum = cls(1, 1)
-        if cls.__name__ == "Sqaure":
+        elif cls.__name__ == "Sqaure":
             dum = cls(1)
         dum.update(**dictionary)
         return dum
