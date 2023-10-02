@@ -19,9 +19,9 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.id, 2)
 
     def test_new_square_1_input(self):
-        s = Square(1)
-        self.assertEqual(s.size, 1)
-        self.assertEqual(s.id, 1)
+        s = Square(4)
+        self.assertEqual(s.size, 4)
+        self.assertEqual(s.id, 5)
         self.assertEqual(s.x, 0)
         self.assertEqual(s.y, 0)
 
