@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Square Unittest Module """ 
+""" Square Unittest Module """
 import unittest
 from models.base import Base
 from models.square import Square
@@ -7,6 +7,7 @@ from models.square import Square
 
 def setUp(self):
     Base._Base__nb_objects = 0
+
 
 class TestSquare(unittest.TestCase):
     """ All tests for Square module """
