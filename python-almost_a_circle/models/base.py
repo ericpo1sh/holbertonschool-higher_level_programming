@@ -59,7 +59,7 @@ class Base:
             with open(cls.__name__ + ".json") as f:
                 json_string = cls.from_json_string(f.read())
             for obj in json_string:
-                empty_list.append(cls.create(**obj))
+                empty_list.append(Base.create(**obj))
         except FileNotFoundError:
             pass
         finally:
