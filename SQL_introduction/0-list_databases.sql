@@ -1,1 +1,1 @@
-SELCET name FROM sys.databases
+SHOW DATABASES;
