@@ -11,11 +11,13 @@ def select_states():
     password = argv[2]
     database = argv[3]
 
-    db = MySQLdb.connect(host='localhost',
-                         port=3306,
-                         user=username,
-                         passwd=password,
-                         db=database)
+    db = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        user=username,
+        passwd=password,
+        db=database
+    )
     database_cursor = db.cursor()
     database_cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'")
     states = database_cursor.fetchall()
