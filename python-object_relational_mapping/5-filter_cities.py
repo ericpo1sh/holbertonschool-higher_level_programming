@@ -35,5 +35,7 @@ if __name__ == "__main__":
     for object in output:
         if object[1] == search:
             print(object)
+            if object[1]:
+                print(",")
     database_cursor.close()
     db.close()
