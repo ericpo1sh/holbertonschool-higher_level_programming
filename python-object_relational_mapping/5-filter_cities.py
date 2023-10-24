@@ -24,17 +24,17 @@ if __name__ == "__main__":
     database_cursor = db.cursor()
     database_cursor.execute(
         "\
-        SELECT cities.name \
+        SELECT cities.name, states.name \
         FROM cities \
         JOIN states \
         ON cities.state_id = states.id \
-        ORDER BY cities.name ASC\
+        ORDER BY cities.id ASC\
         "
     )
     output = database_cursor.fetchall()
     for object in output:
         if object[1] == search:
-            print(", ".join(object))
+            print(", ".join(object[0]))
 
     database_cursor.close()
     db.close()
