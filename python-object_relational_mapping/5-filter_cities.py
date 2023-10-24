@@ -28,12 +28,12 @@ if __name__ == "__main__":
         FROM cities \
         JOIN states \
         ON cities.state_id = states.id \
-        ORDER BY cities.name ASC\
+        ORDER BY cities.id ASC\
         "
     )
     output = database_cursor.fetchall()
     for object in output:
-        if object[1] == search:
+        if object[2] == search:
             print(", ".join(object[0]))
 
     database_cursor.close()
