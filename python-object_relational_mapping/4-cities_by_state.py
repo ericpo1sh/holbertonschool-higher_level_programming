@@ -24,12 +24,12 @@ if __name__ == "__main__":
     database_cursor.execute(
         "\
         SELECT * FROM cities JOIN states \
-        ON cities.state_id \
+        ON cities.state_id = states.id \
         ORDER BY cities.id ASC\
         "
         )
-    states = database_cursor.fetchall()
-    for state in states:
-        print(state)
+    output = database_cursor.fetchall()
+    for object in output:
+        print(object)
     database_cursor.close()
     db.close()
