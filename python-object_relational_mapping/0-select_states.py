@@ -17,11 +17,10 @@ def select_states():
                          passwd=password,
                          db=database)
     database_cursor = db.cursor()
-    database_cursor.execute('SELECT * FROM states ORDER BY id ASC') 
+    database_cursor.execute('SELECT * FROM states ORDER BY id ASC')
     states = database_cursor.fetchall()
     for state in states:
         print(state)
-
     database_cursor.close()
     db.close()
 
