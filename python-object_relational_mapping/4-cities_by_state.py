@@ -21,7 +21,13 @@ if __name__ == "__main__":
         db=database
     )
     database_cursor = db.cursor()
-    database_cursor.execute("SELECT * FROM states ORDER BY cities.id ASC")
+    database_cursor.execute(
+        "\
+        SELECT * FROM cities JOIN states \
+        ON cities.state_id \
+        ORDER BY cities.id ASC\
+        "
+        )
     states = database_cursor.fetchall()
     for state in states:
         print(state)
