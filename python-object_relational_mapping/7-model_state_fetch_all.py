@@ -16,7 +16,11 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State).order_by(State.id).all()
+
+    if states is None:
+        print(None)
     for state in states:
-        print("{}: {}".format(state.id, state.name))
+        if state == "California":
+            print("{}: {}".format(state.id, state.name))
 
     session.close()
