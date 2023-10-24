@@ -34,7 +34,7 @@ if __name__ == "__main__":
     output = database_cursor.fetchall()
     for object in output:
         if object[1] == search:
-            if object[1]:
+            if object[0]:
                 print(", ".join(object[0]))
 
     database_cursor.close()
