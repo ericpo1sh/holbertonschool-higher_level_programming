@@ -17,7 +17,7 @@ def list_states():
                          passwd=password,
                          db=database)
     cursor = db.cursor()
-    cursor.execute("SELECT states.name FROM states ORDER BY states.id ASC")
+    cursor.execute("SELECT * FROM states ORDER id ASC")
     states = cursor.fetchall()
     for statename in states:
         print(statename)
