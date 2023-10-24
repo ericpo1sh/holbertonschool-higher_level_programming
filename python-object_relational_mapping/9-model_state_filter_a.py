@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Write a script that lists all State objects
-that contain the letter a from the database hbtn_0e_6_usa"""
+""" Write a script that prints the State object with the name
+passed as argument from the database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,10 +15,12 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id).filter(
-        State.name.contains('a'))
+    state = session.query(State).order_by(State.id).filter(
+        State.name == sys.argv[4])
 
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    if state:
+        print("{}".format(state.id))
+    else:
+        print("Not Found")
 
     session.close()
