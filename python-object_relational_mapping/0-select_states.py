@@ -17,10 +17,8 @@ def select_states():
                          passwd=password,
                          db=database)
     database_cursor = db.cursor()
-    
-    # Correct the SQL query by adding "FROM states"
+    """ Correct the SQL query by adding "FROM states" """
     database_cursor.execute('SELECT * FROM states ORDER BY id ASC')
-    
     states = database_cursor.fetchall()
     for state in states:
         print(state)
