@@ -16,7 +16,7 @@ if __name__ == "__main__":
     session = Session()
 
     state = session.query(State).order_by(State.id).filter(
-        State.name == sys.argv[4])
+        State.name == sys.argv[4]).first()
 
     if state:
         print("{}".format(state.id))
