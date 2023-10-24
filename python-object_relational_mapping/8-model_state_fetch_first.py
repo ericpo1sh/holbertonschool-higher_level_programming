@@ -15,12 +15,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id).all()
+    states = session.query(State).first()
 
     if states is None:
-        print(None)
+        print("Nothing")
     for state in states:
-        if state.name == "California":
-            print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(state.id, state.name))
 
     session.close()
