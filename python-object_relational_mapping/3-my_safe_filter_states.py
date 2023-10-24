@@ -21,7 +21,7 @@ if __name__ == "__main__":
         db=database
     )
     database_cursor = db.cursor()
-    database_cursor.execute("SELECT * FROM states ORDER BY ASC")
+    database_cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
     states = database_cursor.fetchall()
     for state in states:
         if state[1] == search:
