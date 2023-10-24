@@ -8,13 +8,13 @@ def list_states():
     """ Selects each state from database """
 
     username = sys.argv[1]
-    passwd = sys.argv[2]
+    password = sys.argv[2]
     database = sys.argv[3]
 
     db = MySQLdb.connect(host='localhost',
                          port=3306,
                          user=username,
-                         passwd=passwd,
+                         passwd=password,
                          db=database)
     cursor = db.cursor()
     cursor.execute("SELECT states.name FROM states ORDER BY states.id ASC")
