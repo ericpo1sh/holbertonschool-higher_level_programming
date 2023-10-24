@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""SelectStates module"""
+"""Write a script that lists all states from the database hbtn_0e_0_usa: """
 import MySQLdb
-import sys
+from sys import argv
 
 
 def select_states():
-    """Grabs states from the database"""
+    """Selects states from the database"""
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
 
     db = MySQLdb.connect(host='localhost',
                          port=3306,
@@ -17,10 +17,14 @@ def select_states():
                          passwd=password,
                          db=database)
     database_cursor = db.cursor()
+    
+    # Correct the SQL query by adding "FROM states"
     database_cursor.execute('SELECT * FROM states ORDER BY id ASC')
+    
     states = database_cursor.fetchall()
     for state in states:
         print(state)
+
     database_cursor.close()
     db.close()
 
