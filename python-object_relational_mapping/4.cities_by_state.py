@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+""" Write a script that lists all cities from the database hbtn_0e_4_usa """
+
+
+import MySQLdb
+from sys import argv
+
+
+if __name__ == "__main__":
+
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
+    search = argv[4]
+
+    db = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        user=username,
+        passwd=password,
+        db=database
+    )
+    database_cursor = db.cursor()
+    database_cursor.execute("SELECT * FROM states ORDER BY cities.id ASC")
+    states = database_cursor.fetchall()
+    for state in states:
+        print(state)
+    database_cursor.close()
+    db.close()
