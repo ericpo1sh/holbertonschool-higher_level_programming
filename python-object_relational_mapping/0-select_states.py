@@ -1,15 +1,16 @@
 #!/usr/bin/python3
 """ Write a script that lists all states from the database hbtn_0e_0_usa: """
+
 import MySQLdb
-import sys
+from sys import argv
 
 
 def list_states():
     """ Selects each state from database """
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
 
     db = MySQLdb.connect(host='localhost',
                          port=3306,
@@ -21,7 +22,6 @@ def list_states():
     states = cursor.fetchall()
     for state in states:
         print(state)
-
     cursor.close()
     db.close()
 
