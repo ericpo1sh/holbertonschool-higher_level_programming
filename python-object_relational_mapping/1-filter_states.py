@@ -4,9 +4,7 @@ import MySQLdb
 from sys import argv
 
 
-def select_states():
-    """Selects states from the database"""
-
+if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     database = argv[3]
@@ -25,7 +23,3 @@ def select_states():
         print(state)
     database_cursor.close()
     db.close()
-
-
-if __name__ == "__main__":
-    select_states()
