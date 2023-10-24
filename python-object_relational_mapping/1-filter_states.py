@@ -17,7 +17,7 @@ def select_states():
                          passwd=password,
                          db=database)
     database_cursor = db.cursor()
-    database_cursor.execute('SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC')
+    database_cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'")
     states = database_cursor.fetchall()
     for state in states:
         print(state)
