@@ -20,7 +20,7 @@ if __name__ == "__main__":
     if states is None:
         print(None)
     for state in states:
-        if state == "California":
+        if state.name == "California":
             print("{}: {}".format(state.id, state.name))
 
     session.close()
