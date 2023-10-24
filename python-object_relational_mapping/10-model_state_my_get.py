@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     if state:
         print("{}".format(state.id))
-    if state not in sys.argv[4]:
+    else:
         print("Not Found")
 
     session.close()
