@@ -1,30 +1,27 @@
 #!/usr/bin/python3
-
-""" Write a script that lists all states from the database hbtn_0e_0_usa: """
-
+"""Write a script that lists all states from the database hbtn_0e_0_usa: """
 import MySQLdb
-from sys import argv
+import sys
 
 
 def list_states():
-    """ Selects each state from database """
+    """Grabs states from the database"""
 
-    username = argv[1]
-    password = argv[2]
-    database_name = argv[3]
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
 
     db = MySQLdb.connect(host='localhost',
                          port=3306,
                          user=username,
                          passwd=password,
-                         db=database_name)
-    cursor = db.cursor()
-    cursor.execute('SELECT * FROM states ORDER BY id ASC')
-    states = cursor.fetchall()
+                         db=database)
+    database_cursor = db.cursor()
+    database_cursor.execute('SELECT * FROM states ORDER BY id ASC')
+    states = database_cursor.fetchall()
     for state in states:
         print(state)
-
-    cursor.close()
+    database_cursor.close()
     db.close()
 
 
