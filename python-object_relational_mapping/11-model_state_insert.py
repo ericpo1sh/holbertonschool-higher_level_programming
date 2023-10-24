@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    Add = State(name="Loisiana")
+    Add = State(name="Louisiana")
     state = session.add(Add)
     state = session.query(State).filter(
         State.name == "Louisiana").first()
