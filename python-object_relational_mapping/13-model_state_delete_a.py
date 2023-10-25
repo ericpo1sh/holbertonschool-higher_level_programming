@@ -15,10 +15,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State)(State.id).filter(
-        State.name.contains('a').delete(synchronize_session='evaluate')
-        )
-    session.commit()
+    states = session.query(State).filter(State.name.contains('a')).all()
     for state in states:
-        print("{}: {}".format(state.id, state.name))
-    session.close()
+        session.delete(state)
+    session.commit()
