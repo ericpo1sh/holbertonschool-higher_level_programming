@@ -16,7 +16,7 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State)(State.id).filter(
-        State.name.contains('a').all().delete(synchronize_session='evaluate')
+        State.name.contains('a').delete(synchronize_session='evaluate')
         )
     session.commit()
     for state in states:
