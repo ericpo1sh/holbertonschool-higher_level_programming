@@ -8,8 +8,10 @@ if (process.argv.length === 3) {
       for (let x = 1; x <= number; x++) {
         set += 'X';
       }
-      console.log(set)
+      console.log(set);
     }
+  } else {
+    console.log('Missing size');
   }
 } else {
   console.log('Missing size');
