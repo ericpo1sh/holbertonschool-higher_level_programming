@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // make a function that adds two parameters
-function add(a, b) {
+function add (a, b) {
   return a + b;
 }
 const number1 = Number(process.argv[2]);
