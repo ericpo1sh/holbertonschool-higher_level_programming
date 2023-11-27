@@ -7,9 +7,9 @@ module.exports = class Square extends oldSquare {
   }
 
   charPrint (c = 'X') {
-    for (let y = 1; y <= this.size; y++) {
+    for (let y = 1; y <= this.width; y++) {
       let set = '';
-      for (let x = 1; x <= this.size; x++) {
+      for (let x = 1; x <= this.width; x++) {
         set += c;
       }
       console.log(set);
