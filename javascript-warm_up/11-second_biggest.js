@@ -4,5 +4,5 @@ if (process.argv.length < 3 || process.argv.length === 3) {
   console.log('0');
 } else {
   const array = process.argv.slice(2).sort((b, a) => a - b);
-  console.log(array[0]);
+  console.log(array[1]);
 }
