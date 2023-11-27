@@ -6,13 +6,11 @@ module.exports = class Square extends oldSquare {
     super(size, size);
   }
 
-  charPrint (c) {
+  charPrint (c = 'X') {
     for (let y = 1; y <= this.size; y++) {
       let set = '';
       for (let x = 1; x <= this.size; x++) {
-        if (c === 'C')
-        set += "C";
-      set += "X"
+        set += c;
       }
       console.log(set);
     }
