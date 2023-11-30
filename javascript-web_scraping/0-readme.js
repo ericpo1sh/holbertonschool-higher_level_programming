@@ -3,7 +3,7 @@
 
 const fs = require('fs');
 async function readme (filename) {
-  const data = fs.readFile(filename, 'utf-8', (error, data) => {
+  fs.readFile(filename, 'utf-8', (error, data) => {
     if (error) {
       console.error(error);
       return;
