@@ -9,9 +9,9 @@ async function starWarsCount (url) {
     else if (body) {
       let count = 0;
       const rizzults = JSON.parse(body).results;
-      for (let film of rizzults) {
-        for (let character of film.characters) {
-          if (character.match('https://swapi-api.hbtn.io/api/people/18/')) {
+      for (const film of rizzults) {
+        for (const character of film.characters) {
+          if (character.match(/.\/18\//g)) {
             count += 1;
           }
         }
